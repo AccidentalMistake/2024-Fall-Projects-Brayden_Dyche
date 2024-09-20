@@ -9,6 +9,7 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import team.gif.lib.logging.EventFileLogger;
 import team.gif.lib.logging.TelemetryFileLogger;
+import team.gif.robot.subsystems.LimitSwitch;
 import team.gif.robot.subsystems.drivers.Pigeon;
 
 /**
@@ -23,7 +24,7 @@ public class Robot extends TimedRobot {
   private static TelemetryFileLogger telemetryLogger;
   public static EventFileLogger eventLogger;
   public static OI oi;
-
+  public static LimitSwitch state;
   public static Pigeon pigeon;
 
   public static UiSmartDashboard uiSmartDashboard;
@@ -36,11 +37,11 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotInit() {
-    // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
-    // autonomous chooser on the dashboard.
     robotContainer = new RobotContainer();
     oi = new OI();
     uiSmartDashboard = new UiSmartDashboard();
+    state = new LimitSwitch();
+    System.out.println(state.Switch_State());
 
   }
 
@@ -53,10 +54,7 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotPeriodic() {
-    // Runs the Scheduler.  This is responsible for polling buttons, adding newly-scheduled
-    // commands, running already-scheduled commands, removing finished or interrupted commands,
-    // and running subsystem periodic() methods.  This must be called from the robot's periodic
-    // block in order for anything in the Command-based framework to work.
+    System.out.println(state.Switch_State());
     CommandScheduler.getInstance().run();
 
     uiSmartDashboard.updateUI();
