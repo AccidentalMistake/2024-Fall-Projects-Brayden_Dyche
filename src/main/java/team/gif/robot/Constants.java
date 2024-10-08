@@ -18,6 +18,9 @@ import edu.wpi.first.math.util.Units;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
+    public static double motor_Power = 0.5;
+    public static double motor_Power_Reverse = -0.5;
+    public static double motor_Stop = 0.0;
 
 
 }

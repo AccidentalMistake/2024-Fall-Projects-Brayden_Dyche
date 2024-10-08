@@ -1,17 +1,20 @@
 package team.gif.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.Command;
+import edu.wpi.first.wpilibj.Timer;
 
-public class CommandTemplate extends Command {
+public class Print_TimeStamp extends Command {
 
-    public CommandTemplate() {
+    public Print_TimeStamp() {
         super();
         //addRequirements(Robot.climber); // uncomment
     }
 
     // Called when the command is initially scheduled.
     @Override
-    public void initialize() {}
+    public void initialize() {
+        System.out.println(Timer.getFPGATimestamp());
+    }
 
     // Called every time the scheduler runs (~20ms) while the command is scheduled
     @Override
