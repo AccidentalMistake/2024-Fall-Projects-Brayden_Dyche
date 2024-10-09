@@ -2,8 +2,8 @@ package team.gif.robot;
 
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
-import team.gif.robot.commands.Talon_Srx_Motor_Control;
-import team.gif.robot.commands.Talon_Srx_Motor_Control_Reverse;
+import team.gif.robot.commands.TalonSrxMotorControl;
+import team.gif.robot.commands.TalonSrxMotorControlReverse;
 
 public class OI {
     /*
@@ -88,8 +88,8 @@ public class OI {
          * Simple Test:
          *   aX.onTrue(new PrintCommand("aX"));
          */
-        dX.whileTrue(new Talon_Srx_Motor_Control());
-        dB.whileTrue(new Talon_Srx_Motor_Control_Reverse());
+        dX.whileTrue(new TalonSrxMotorControl());
+        dB.whileTrue(new TalonSrxMotorControlReverse());
 
 
 
