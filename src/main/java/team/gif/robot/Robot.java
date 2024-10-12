@@ -10,8 +10,10 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import team.gif.lib.logging.EventFileLogger;
 import team.gif.lib.logging.TelemetryFileLogger;
+import team.gif.robot.commands.SparkMaxForward;
 import team.gif.robot.commands.TalonJoystickControl;
 import team.gif.robot.subsystems.LimitSwitch;
+import team.gif.robot.subsystems.SparkMaxMotor;
 import team.gif.robot.subsystems.TalonSrxMotor;
 import team.gif.robot.subsystems.drivers.Pigeon;
 
@@ -29,6 +31,7 @@ public class Robot extends TimedRobot {
   public static OI oi;
   public static LimitSwitch limitSwitch;
   public static TalonSrxMotor talonSrxMotor;
+  public static SparkMaxMotor sparkMaxMotor;
 
   public static Pigeon pigeon;
 
@@ -51,6 +54,7 @@ public class Robot extends TimedRobot {
     pigeon = new Pigeon(RobotMap.PIGEON_ID);
     talonSrxMotor = new TalonSrxMotor();
     talonSrxMotor.setDefaultCommand(new TalonJoystickControl());
+    sparkMaxMotor = new SparkMaxMotor();
 
   }
 
@@ -70,8 +74,8 @@ public class Robot extends TimedRobot {
     CommandScheduler.getInstance().run();
 
     uiSmartDashboard.updateUI();
-//    System.out.println(limitSwitch.limitSwitchState());
-//    System.out.println(pigeon.get360Heading());
+    //System.out.println(limitSwitch.limitSwitchState());
+    //System.out.println(pigeon.get360Heading());
 
   }
 
