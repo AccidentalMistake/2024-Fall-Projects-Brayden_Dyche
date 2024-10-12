@@ -28,13 +28,14 @@ public class Robot extends TimedRobot {
   private RobotContainer robotContainer;
   private static TelemetryFileLogger telemetryLogger;
   public static EventFileLogger eventLogger;
-  public static OI oi;
+
   public static LimitSwitch limitSwitch;
   public static TalonSrxMotor talonSrxMotor;
   public static SparkMaxMotor sparkMaxMotor;
+  public static UI ui;
 
   public static Pigeon pigeon;
-
+  public static OI oi;
   public static UiSmartDashboard uiSmartDashboard;
 
   public static final boolean enableSwerveDebug = false;
@@ -47,14 +48,18 @@ public class Robot extends TimedRobot {
   public void robotInit() {
     // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
     // autonomous chooser on the dashboard.
-    robotContainer = new RobotContainer();
-    oi = new OI();
+
     uiSmartDashboard = new UiSmartDashboard();
     limitSwitch = new LimitSwitch();
     pigeon = new Pigeon(RobotMap.PIGEON_ID);
     talonSrxMotor = new TalonSrxMotor();
     talonSrxMotor.setDefaultCommand(new TalonJoystickControl());
     sparkMaxMotor = new SparkMaxMotor();
+    robotContainer = new RobotContainer();
+
+
+    ui = new UI();
+    oi = new OI();
 
   }
 

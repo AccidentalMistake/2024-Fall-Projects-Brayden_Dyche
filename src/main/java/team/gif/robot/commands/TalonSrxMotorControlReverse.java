@@ -11,6 +11,7 @@ public class TalonSrxMotorControlReverse extends Command {
 
     public TalonSrxMotorControlReverse() {
         super();
+        addRequirements(Robot.talonSrxMotor);
 
     }
 
@@ -21,7 +22,7 @@ public class TalonSrxMotorControlReverse extends Command {
     // Called every time the scheduler runs (~20ms) while the command is scheduled
     @Override
     public void execute() {
-        Robot.talonSrxMotor.motorMove(-Constants.CIM_MOTOR_PERCENT);
+            Robot.talonSrxMotor.motorMove(-Constants.CIM_MOTOR_PERCENT);
     }
 
     // Return true when the command should end, false if it should continue. Runs every ~20ms.

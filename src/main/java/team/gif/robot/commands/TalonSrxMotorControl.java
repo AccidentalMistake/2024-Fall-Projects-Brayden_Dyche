@@ -11,7 +11,7 @@ public class TalonSrxMotorControl extends Command {
 
     public TalonSrxMotorControl() {
         super();
-
+        addRequirements(Robot.talonSrxMotor);
     }
 
     // Called when the command is initially scheduled.

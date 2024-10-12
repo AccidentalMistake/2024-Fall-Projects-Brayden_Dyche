@@ -9,6 +9,7 @@ public class SparkMaxForward extends Command {
     public SparkMaxForward() {
         super();
         //addRequirements(Robot.climber); // uncomment
+        addRequirements(Robot.sparkMaxMotor);
     }
 
     // Called when the command is initially scheduled.
