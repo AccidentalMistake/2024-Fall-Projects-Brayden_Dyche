@@ -24,7 +24,7 @@ public class TalonJoystickControl extends Command {
     @Override
     public void execute() {
     double left = Robot.oi.driver.getLeftY();
-    Robot.talonSrxMotor.motorMove(left);
+    Robot.talonSrxMotor.motorMove(-left);
     }
 
     // Return true when the command should end, false if it should continue. Runs every ~20ms.

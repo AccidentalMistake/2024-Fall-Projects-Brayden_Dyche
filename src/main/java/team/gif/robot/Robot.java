@@ -70,8 +70,8 @@ public class Robot extends TimedRobot {
     CommandScheduler.getInstance().run();
 
     uiSmartDashboard.updateUI();
-    System.out.println(limitSwitch.limitSwitchState());
-    System.out.println(pigeon.get360Heading());
+//    System.out.println(limitSwitch.limitSwitchState());
+//    System.out.println(pigeon.get360Heading());
 
   }
 
