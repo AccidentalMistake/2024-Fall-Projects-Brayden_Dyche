@@ -56,6 +56,7 @@ public class Robot extends TimedRobot {
     talonSrxMotor.setDefaultCommand(new TalonJoystickControl());
     sparkMaxMotor = new SparkMaxMotor();
     robotContainer = new RobotContainer();
+    pigeon.addToShuffleboard("BAB", "Heading");
 
 
     ui = new UI();
