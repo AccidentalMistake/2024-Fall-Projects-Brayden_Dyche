@@ -11,15 +11,16 @@ package team.gif.robot;
  *   There is many more functions that you can use, example addString, addNumber, etc.
  */
 
+import com.ctre.phoenix.sensors.WPI_PigeonIMU;
+import edu.wpi.first.cscore.VideoSource;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 
 public class UI {
+
     public UI() {
         ShuffleboardTab shuffleboardTab = Shuffleboard.getTab("BAB");
 
         shuffleboardTab.addBoolean("Limit Switch",Robot.limitSwitch::limitSwitchState);
-
-
     }
 }

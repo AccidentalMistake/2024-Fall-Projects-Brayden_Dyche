@@ -19,5 +19,6 @@ public class SparkMaxMotor extends SubsystemBase {
     public void sparkMaxMove(double voltageOutput){
         motor.setVoltage(voltageOutput);
     }
+    
 
 }

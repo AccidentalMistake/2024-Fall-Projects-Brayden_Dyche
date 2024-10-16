@@ -20,6 +20,7 @@ import edu.wpi.first.math.util.Units;
 public final class Constants {
     public static double CIM_MOTOR_PERCENT = 0.2;
     public static double SPARKMAX_MOTOR_VOLTAGE = 2.5;
+    public static double NEO_RPM = 60;
 
 
 }

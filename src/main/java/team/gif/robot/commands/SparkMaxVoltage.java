@@ -4,9 +4,9 @@ import edu.wpi.first.wpilibj2.command.Command;
 import team.gif.robot.Constants;
 import team.gif.robot.Robot;
 
-public class SparkMaxForward extends Command {
+public class SparkMaxVoltage extends Command {
 
-    public SparkMaxForward() {
+    public SparkMaxVoltage() {
         super();
         //addRequirements(Robot.climber); // uncomment
         addRequirements(Robot.sparkMaxMotor);
