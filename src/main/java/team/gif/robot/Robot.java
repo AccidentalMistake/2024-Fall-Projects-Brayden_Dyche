@@ -10,7 +10,6 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import team.gif.lib.logging.EventFileLogger;
 import team.gif.lib.logging.TelemetryFileLogger;
-import team.gif.robot.commands.SparkMaxForward;
 import team.gif.robot.commands.TalonJoystickControl;
 import team.gif.robot.subsystems.LimitSwitch;
 import team.gif.robot.subsystems.SparkMaxMotor;
