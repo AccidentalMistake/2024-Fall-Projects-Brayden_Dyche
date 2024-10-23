@@ -2,6 +2,8 @@ package team.gif.robot;
 
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
+import team.gif.robot.commands.SoleniodIn;
+import team.gif.robot.commands.SoleniodOut;
 import team.gif.robot.commands.SparkMaxRpm;
 import team.gif.robot.commands.SparkMaxVoltage;
 import team.gif.robot.commands.TalonSrxMotorControl;
@@ -94,6 +96,8 @@ public class OI {
         dB.whileTrue(new TalonSrxMotorControlReverse());
         dY.whileTrue(new SparkMaxVoltage());
         dA.whileTrue(new SparkMaxRpm());
+        dLBump.onTrue(new SoleniodOut());
+        dRBump.onTrue(new SoleniodIn());
 
 
 

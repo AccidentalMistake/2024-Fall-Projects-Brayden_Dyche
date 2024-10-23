@@ -12,6 +12,7 @@ import team.gif.lib.logging.EventFileLogger;
 import team.gif.lib.logging.TelemetryFileLogger;
 import team.gif.robot.commands.TalonJoystickControl;
 import team.gif.robot.subsystems.LimitSwitch;
+import team.gif.robot.subsystems.PneumaticSoleniods;
 import team.gif.robot.subsystems.SparkMaxMotor;
 import team.gif.robot.subsystems.TalonSrxMotor;
 import team.gif.robot.subsystems.drivers.Pigeon;
@@ -31,6 +32,7 @@ public class Robot extends TimedRobot {
   public static LimitSwitch limitSwitch;
   public static TalonSrxMotor talonSrxMotor;
   public static SparkMaxMotor sparkMaxMotor;
+  public static PneumaticSoleniods pneumaticSoleniods;
   public static UI ui;
 
   public static Pigeon pigeon;
@@ -55,6 +57,7 @@ public class Robot extends TimedRobot {
     talonSrxMotor.setDefaultCommand(new TalonJoystickControl());
     sparkMaxMotor = new SparkMaxMotor();
     robotContainer = new RobotContainer();
+    pneumaticSoleniods = new PneumaticSoleniods();
     pigeon.addToShuffleboard("BAB", "Heading");
 
 

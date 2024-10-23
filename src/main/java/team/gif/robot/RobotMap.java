@@ -9,4 +9,6 @@ public abstract class RobotMap {
     public static final int PIGEON_ID = 5;
     public static final int TALON_MOTOR_ID = 8;
     public static final int SparkMax_ID = 45;
+    public static final int SOLENIOD_IN_ID = 0;
+    public static final int SOLENIOD_OUT_ID = 1;
 }
