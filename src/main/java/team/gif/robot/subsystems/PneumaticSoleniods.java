@@ -6,7 +6,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import team.gif.robot.RobotMap;
 
 public class PneumaticSoleniods extends SubsystemBase {
-    private DoubleSolenoid solenoid;
+    private final DoubleSolenoid solenoid;
 
 
     public PneumaticSoleniods() {
