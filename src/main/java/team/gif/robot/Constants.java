@@ -18,16 +18,10 @@ import edu.wpi.first.math.util.Units;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
-    public static double CIM_MOTOR_PERCENT = 0.2;
-    public static double SPARKMAX_MOTOR_VOLTAGE = 2.5;
-    public static double SPARKMAX_MOTOR_RPM = 60;
+    public static double CIM_MOTOR_PERCENT = 0.1;
 
-    public final class NeoConstants{
-        public static double kP_NEO = 0.0004;
-        public static double FF_NEO = 0.000280;
 
 
     }
-}
 
 
