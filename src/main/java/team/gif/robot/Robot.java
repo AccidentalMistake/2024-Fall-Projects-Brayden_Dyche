@@ -4,16 +4,13 @@
 
 package team.gif.robot;
 
-import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import team.gif.lib.logging.EventFileLogger;
 import team.gif.lib.logging.TelemetryFileLogger;
-import team.gif.robot.commands.TalonJoystickControl;
-import team.gif.robot.subsystems.LimitSwitch;
-import team.gif.robot.subsystems.PneumaticSoleniods;
-import team.gif.robot.subsystems.SparkMaxMotor;
+import team.gif.robot.commands.TankDrive;
+import team.gif.robot.subsystems.DriveTrain;
 import team.gif.robot.subsystems.TalonSrxMotor;
 import team.gif.robot.subsystems.drivers.Pigeon;
 
@@ -29,10 +26,8 @@ public class Robot extends TimedRobot {
   private static TelemetryFileLogger telemetryLogger;
   public static EventFileLogger eventLogger;
 
-  public static LimitSwitch limitSwitch;
   public static TalonSrxMotor talonSrxMotor;
-  public static SparkMaxMotor sparkMaxMotor;
-  public static PneumaticSoleniods pneumaticSoleniods;
+  public static DriveTrain driveTrain;
   public static UI ui;
 
   public static Pigeon pigeon;
@@ -51,13 +46,12 @@ public class Robot extends TimedRobot {
     // autonomous chooser on the dashboard.
 
     uiSmartDashboard = new UiSmartDashboard();
-    limitSwitch = new LimitSwitch();
     pigeon = new Pigeon(RobotMap.PIGEON_ID);
     talonSrxMotor = new TalonSrxMotor();
-    talonSrxMotor.setDefaultCommand(new TalonJoystickControl());
-    sparkMaxMotor = new SparkMaxMotor();
+    //talonSrxMotor.setDefaultCommand(new TalonJoystickControl());
     robotContainer = new RobotContainer();
-    pneumaticSoleniods = new PneumaticSoleniods();
+    //driveTrain.setDefaultCommand(new ArcadeDrive());
+    driveTrain.setDefaultCommand(new TankDrive());
     pigeon.addToShuffleboard("BAB", "Heading");
 
 
@@ -82,8 +76,7 @@ public class Robot extends TimedRobot {
     CommandScheduler.getInstance().run();
 
     uiSmartDashboard.updateUI();
-    //System.out.println(limitSwitch.limitSwitchState());
-    //System.out.println(pigeon.get360Heading());
+
 
   }
 

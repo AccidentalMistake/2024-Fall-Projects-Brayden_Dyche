@@ -1,26 +1,27 @@
 package team.gif.robot.commands;
 
-import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj2.command.Command;
 import team.gif.robot.Robot;
 
-public class SoleniodIn extends Command {
+public class ArcadeDrive extends Command {
 
-    public SoleniodIn() {
+    public ArcadeDrive() {
         super();
         //addRequirements(Robot.climber); // uncomment
-        addRequirements(Robot.pneumaticSoleniods);
+        addRequirements(Robot.driveTrain);
     }
 
     // Called when the command is initially scheduled.
     @Override
-    public void initialize() {
-        Robot.pneumaticSoleniods.setSolenoid(DoubleSolenoid.Value.kReverse);
-    }
+    public void initialize() {}
 
     // Called every time the scheduler runs (~20ms) while the command is scheduled
     @Override
-    public void execute() {}
+    public void execute() {
+        double turn = Robot.oi.driver.getRightX();
+        double speed = Robot.oi.driver.getLeftY();
+        Robot.driveTrain.driveArcade(speed, turn);
+    }
 
     // Return true when the command should end, false if it should continue. Runs every ~20ms.
     @Override
@@ -30,5 +31,7 @@ public class SoleniodIn extends Command {
 
     // Called when the command ends or is interrupted.
     @Override
-    public void end(boolean interrupted) {}
+    public void end(boolean interrupted) {
+        Robot.driveTrain.driveArcade(0,0);
+    }
 }
