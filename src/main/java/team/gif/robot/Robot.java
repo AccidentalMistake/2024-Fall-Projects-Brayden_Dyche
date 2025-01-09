@@ -48,7 +48,6 @@ public class Robot extends TimedRobot {
     uiSmartDashboard = new UiSmartDashboard();
     pigeon = new Pigeon(RobotMap.PIGEON_ID);
     talonSrxMotor = new TalonSrxMotor();
-    //talonSrxMotor.setDefaultCommand(new TalonJoystickControl());
     robotContainer = new RobotContainer();
     //driveTrain.setDefaultCommand(new ArcadeDrive());
     driveTrain.setDefaultCommand(new TankDrive());
