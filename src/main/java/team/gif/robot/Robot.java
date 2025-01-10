@@ -50,7 +50,7 @@ public class Robot extends TimedRobot {
     talonSrxMotor = new TalonSrxMotor();
     robotContainer = new RobotContainer();
     //driveTrain.setDefaultCommand(new ArcadeDrive());
-    driveTrain.setDefaultCommand(new TankDrive());
+    //driveTrain.setDefaultCommand(new TankDrive());
     pigeon.addToShuffleboard("BAB", "Heading");
 
 
