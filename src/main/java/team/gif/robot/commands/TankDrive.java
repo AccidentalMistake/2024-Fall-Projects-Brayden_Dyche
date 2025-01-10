@@ -8,7 +8,7 @@ public class TankDrive extends Command {
     public TankDrive() {
         super();
         //addRequirements(Robot.climber); // uncomment
-        //addRequirements(Robot.driveTrain);
+        addRequirements(Robot.driveTrain);
     }
 
     // Called when the command is initially scheduled.
