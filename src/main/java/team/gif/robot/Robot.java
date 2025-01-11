@@ -46,11 +46,11 @@ public class Robot extends TimedRobot {
     // autonomous chooser on the dashboard.
 
     uiSmartDashboard = new UiSmartDashboard();
+    driveTrain = new DriveTrain();
     pigeon = new Pigeon(RobotMap.PIGEON_ID);
     talonSrxMotor = new TalonSrxMotor();
     robotContainer = new RobotContainer();
-    //driveTrain.setDefaultCommand(new ArcadeDrive());
-    //driveTrain.setDefaultCommand(new TankDrive());
+    driveTrain.setDefaultCommand(new TankDrive());
     pigeon.addToShuffleboard("BAB", "Heading");
 
 
