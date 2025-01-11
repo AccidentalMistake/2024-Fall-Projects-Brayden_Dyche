@@ -35,9 +35,6 @@ public class DriveTrain  extends SubsystemBase {
 
         drive = new DifferentialDrive(frontLeftCIM, frontRightCIM);
     }
-    public void driveArcade(double speed, double rotation){
-        drive.arcadeDrive(speed, rotation);
-    }
     public void driveTank(double leftSpeed, double rightSpeed){
         drive.tankDrive(leftSpeed, rightSpeed);
     }

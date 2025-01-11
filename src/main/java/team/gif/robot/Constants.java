@@ -18,7 +18,7 @@ import edu.wpi.first.math.util.Units;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
-    public static double CIM_MOTOR_PERCENT = 0.1;
+    public static double CIM_MOTOR_PERCENT = 0.5;
 
 
 
