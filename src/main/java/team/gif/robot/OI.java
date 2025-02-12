@@ -90,8 +90,8 @@ public class OI {
          * Simple Test:
          *   aX.onTrue(new PrintCommand("aX"));
          */
-        dX.whileTrue(new TalonSrxMotorControl());
-        dB.whileTrue(new TalonSrxMotorControlReverse());
+        //dX.whileTrue(new TalonSrxMotorControl());
+        //dB.whileTrue(new TalonSrxMotorControlReverse());
         dY.whileTrue(new SparkMaxVoltage());
         dA.whileTrue(new SparkMaxRpm());
 

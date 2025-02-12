@@ -51,8 +51,8 @@ public class Robot extends TimedRobot {
     uiSmartDashboard = new UiSmartDashboard();
     limitSwitch = new LimitSwitch();
     pigeon = new Pigeon(RobotMap.PIGEON_ID);
-    talonSrxMotor = new TalonSrxMotor();
-    talonSrxMotor.setDefaultCommand(new TalonJoystickControl());
+    //talonSrxMotor = new TalonSrxMotor();
+    //talonSrxMotor.setDefaultCommand(new TalonJoystickControl());
     sparkMaxMotor = new SparkMaxMotor();
     robotContainer = new RobotContainer();
     pigeon.addToShuffleboard("BAB", "Heading");
