@@ -1,0 +1,18 @@
+{
+  "HALProvider": {
+    "Timing": {
+      "window": {
+        "visible": false
+      }
+    }
+  },
+  "NTProvider": {
+    "types": {
+      "/FMSInfo": "FMSInfo",
+      "/Shuffleboard/BAB/Heading": "Gyro"
+    }
+  },
+  "NetworkTables Info": {
+    "visible": true
+  }
+}

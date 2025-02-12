@@ -18,11 +18,7 @@ public class TalonSrxMotor extends SubsystemBase {
     }
 
     public void motorMove(double percentOutput) {
-        if (Robot.limitSwitch.limitSwitchState()) {
-            motor.set(TalonSRXControlMode.PercentOutput, percentOutput/2);
-        }
-        else {
-            motor.set(TalonSRXControlMode.PercentOutput, percentOutput);
-        }
+        motor.set(TalonSRXControlMode.PercentOutput, percentOutput);
+
     }
 }
